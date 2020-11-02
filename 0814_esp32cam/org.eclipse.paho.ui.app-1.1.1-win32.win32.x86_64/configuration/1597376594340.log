@@ -1,0 +1,31 @@
+!SESSION 2020-08-14 11:43:14.178 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_261
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_TW
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2020-08-14 11:43:15.192
+!MESSAGE Application error
+!STACK 1
+java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:260)
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:240)
+	at org.eclipse.swt.internal.C.<clinit>(C.java:21)
+	at org.eclipse.swt.widgets.Display.<clinit>(Display.java:138)
+	at org.eclipse.ui.internal.Workbench.createDisplay(Workbench.java:679)
+	at org.eclipse.ui.PlatformUI.createDisplay(PlatformUI.java:162)
+	at org.eclipse.paho.mqtt.ui.Application.start(Application.java:35)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
